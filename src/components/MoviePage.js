@@ -1,12 +1,13 @@
 import React from 'react'
 import { Card, Button } from "react-bootstrap"
 import "./MoviePage.css"
-import {Link} from 'react-router-dom'
+import {Link,Redirect} from 'react-router-dom'
 
 
 export default function MoviePage({movie}) {
     return (
         <div>
+            {movie.title === undefined ? <> {alert("please use the see more button to access movie details")} <Redirect to="/" /> </> :
         <Card className="moviePageCard">
             <Card.Body className="MoviePageBody">
             <Card.Img variant="top" src={movie.posterUrl} className="moviePageImg"/>
@@ -24,6 +25,7 @@ export default function MoviePage({movie}) {
                 </div>
             </Card.Body>
         </Card>
+    } 
         </div>
     )
 }

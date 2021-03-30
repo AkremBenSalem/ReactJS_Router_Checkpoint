@@ -128,10 +128,10 @@ function App() {
   return (
     <div className="mainPage">
       <Router>
-        <Route path="/" component = {() => <NavBar addNewMovie={addNewMovie} setRateFilter={setRateFilter} setSearchFilter={setSearchFilter}/>}/>
+        <Route path="/" render = {() => <NavBar addNewMovie={addNewMovie} setRateFilter={setRateFilter} setSearchFilter={setSearchFilter}/>}/>
         <Switch>
-        <Route path="/" exact component = {() => <MovieList movies={movies} rateFilter={rateFilter} searchFilter={searchFilter} setMoviePage={setMoviePage}/>}/>
-        <Route path="/movie/:id" exact component = {() => <MoviePage movie={moviePage} />}/>
+          <Route path="/" exact render = {() => <MovieList movies={movies} rateFilter={rateFilter} searchFilter={searchFilter} setMoviePage={setMoviePage}/>}/>
+          <Route path="/movie/:id" exact render = {() => <MoviePage movie={moviePage} />}/>
         </Switch>
       </Router>
         

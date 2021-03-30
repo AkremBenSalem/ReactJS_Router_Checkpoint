@@ -28,7 +28,7 @@ return (
             <Form.Control type="text" placeholder="Title" className="AddMovieInput" onChange={(event)=>setNewMovie({...newMovie, title:event.target.value})} required/>
             <Form.Control type="text" placeholder="Description" className="AddMovieInput" onChange={(event)=>setNewMovie({...newMovie, description:event.target.value})} required/>
             <Form.Control type="text" placeholder="Poster URL" className="AddMovieInput" onChange={(event)=>setNewMovie({...newMovie, posterUrl:event.target.value})}/>
-            <Form.Control type="text" placeholder="Trailer URL" className="AddMovieInput" onChange={(event)=>setNewMovie({...newMovie, trailer:event.target.value})}/>
+            <Form.Control type="text" placeholder="Trailer URL (Youtube)" className="AddMovieInput" onChange={(event)=>setNewMovie({...newMovie, trailer:event.target.value})}/>
             <Form.Control type="number" placeholder="Rating" max="5" min="0" className="AddMovieInput" onChange={(event)=>event.target.value > 5 ? setNewMovie({...newMovie, rate:5}) : event.target.value < 0 ? setNewMovie({...newMovie, rate:0}): setNewMovie({...newMovie, rate:event.target.value})}/>
         </Form.Group>
         </Modal.Body>
